@@ -8,7 +8,8 @@
 
 
 #import "FavoritiesTableViewCell.h"
-
+#import "AFNetworking.h"
+#import "AFJSONRequestOperation.h"
 @interface FavoritiesTableViewCell()
 {
     UIImageView *imgFavorite;
@@ -64,8 +65,13 @@
     [lblName setText:@"Anney"];
     
 }
+-(void)UpdateData:(NSString*)tittle imageViewUrlString:(NSString*)ImageString{
+    [lblName setText:tittle];
+    [imgFavorite setImageWithURL:[NSURL URLWithString:ImageString] placeholderImage:[UIImage imageNamed:@""]];
+    imgFavorite.layer.cornerRadius=imgFavorite.frame.size.width/2;
+    imgFavorite.clipsToBounds=YES;
 
-
+}
 - (void)awakeFromNib
 {
     // Initialization code

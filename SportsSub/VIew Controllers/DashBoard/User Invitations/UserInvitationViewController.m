@@ -13,6 +13,8 @@
 #import "UserDefaultsHelper.h"
 #import "SSDBManager.h"
 #import "SSAlertView.h"
+#import "AFNetworking.h"
+#import "AFJSONRequestOperation.h"
 @interface UserInvitationViewController ()
 
 @end

@@ -13,7 +13,8 @@
 #import "UserDefaultsHelper.h"
 #import "SSDBManager.h"
 #import "UserFavourites.h"
-
+#import "AFNetworking.h"
+#import "AFJSONRequestOperation.h"
 @interface FavouritieViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tblFavorite;
 
@@ -84,9 +85,10 @@
     }
     
     UserFavourites *user=[[[SSDBManager sharedInstance] getDBFavorites] objectAtIndex:indexPath.row];
+
+    [cell UpdateData:user.favouriteUserFirstname imageViewUrlString:user.favouriteUserThumbImage];
     
-    
-    cell.textLabel.text=user.favouriteUserFirstname;
+    //cell.textLabel.text=user.favouriteUserFirstname;
 //    [cell updateCell:self];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;

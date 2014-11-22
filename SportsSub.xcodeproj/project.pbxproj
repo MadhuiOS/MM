@@ -29,6 +29,7 @@
 		D73B56C91A191E540032E01E /* FriendsProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D73B56C71A191E540032E01E /* FriendsProfileViewController.xib */; };
 		D77648E01A1BD5350009FA1F /* HELVNB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D77648DE1A1BD5350009FA1F /* HELVNB.TTF */; };
 		D77648E11A1BD5350009FA1F /* HELVNUL.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D77648DF1A1BD5350009FA1F /* HELVNUL.TTF */; };
+		D78929571A21073400ED54F6 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D78929561A21073400ED54F6 /* UIImageView+AFNetworking.m */; };
 		D78C67F81A0DCBB10007A188 /* IQ_NSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = D78C67E41A0DCBB10007A188 /* IQ_NSArray+Sort.m */; };
 		D78C67F91A0DCBB10007A188 /* IQ_UIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = D78C67E61A0DCBB10007A188 /* IQ_UIView+Hierarchy.m */; };
 		D78C67FA1A0DCBB10007A188 /* IQ_UIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D78C67E81A0DCBB10007A188 /* IQ_UIView+IQKeyboardToolbar.m */; };
@@ -236,6 +237,8 @@
 		D73B56C71A191E540032E01E /* FriendsProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsProfileViewController.xib; sourceTree = "<group>"; };
 		D77648DE1A1BD5350009FA1F /* HELVNB.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = HELVNB.TTF; sourceTree = "<group>"; };
 		D77648DF1A1BD5350009FA1F /* HELVNUL.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = HELVNUL.TTF; sourceTree = "<group>"; };
+		D78929551A21073400ED54F6 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		D78929561A21073400ED54F6 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		D78C67E31A0DCBB10007A188 /* IQ_NSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQ_NSArray+Sort.h"; sourceTree = "<group>"; };
 		D78C67E41A0DCBB10007A188 /* IQ_NSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQ_NSArray+Sort.m"; sourceTree = "<group>"; };
 		D78C67E51A0DCBB10007A188 /* IQ_UIView+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQ_UIView+Hierarchy.h"; sourceTree = "<group>"; };
@@ -743,6 +746,8 @@
 				E53F86BB1A1DBA580080942A /* AFURLConnectionOperation.m */,
 				E53F86BC1A1DBA580080942A /* AFXMLRequestOperation.h */,
 				E53F86BD1A1DBA580080942A /* AFXMLRequestOperation.m */,
+				D78929551A21073400ED54F6 /* UIImageView+AFNetworking.h */,
+				D78929561A21073400ED54F6 /* UIImageView+AFNetworking.m */,
 			);
 			path = AFNetworking;
 			sourceTree = "<group>";
@@ -1324,6 +1329,7 @@
 				E54456DC1A1C01740022B215 /* UserReceivedInvitation.m in Sources */,
 				E5B9A24D1A14785600B2B93D /* NSDate+TCUtils.m in Sources */,
 				E53F86C41A1DBA580080942A /* AFPropertyListRequestOperation.m in Sources */,
+				D78929571A21073400ED54F6 /* UIImageView+AFNetworking.m in Sources */,
 				E53F86BF1A1DBA580080942A /* AFHTTPRequestOperation.m in Sources */,
 				E5784E7A19F9962B00F44FFB /* UserOwnProfileViewController.m in Sources */,
 				E51718D61A05191200BA8558 /* UserProfile.m in Sources */,
