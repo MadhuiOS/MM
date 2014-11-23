@@ -132,6 +132,8 @@
 		E54456D61A1BF7270022B215 /* UserInvitationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54456D41A1BF7270022B215 /* UserInvitationViewController.xib */; };
 		E54456D91A1C01680022B215 /* UserSentInvitation.m in Sources */ = {isa = PBXBuildFile; fileRef = E54456D81A1C01680022B215 /* UserSentInvitation.m */; };
 		E54456DC1A1C01740022B215 /* UserReceivedInvitation.m in Sources */ = {isa = PBXBuildFile; fileRef = E54456DB1A1C01740022B215 /* UserReceivedInvitation.m */; };
+		E552A65D1A21F5330015D12E /* UserInvitationCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E552A65B1A21F5330015D12E /* UserInvitationCellTableViewCell.m */; };
+		E552A65E1A21F5330015D12E /* UserInvitationCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E552A65C1A21F5330015D12E /* UserInvitationCellTableViewCell.xib */; };
 		E5784D6619F9847B00F44FFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5784D6519F9847B00F44FFB /* main.m */; };
 		E5784D7219F9847B00F44FFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5784D7019F9847B00F44FFB /* Main.storyboard */; };
 		E5784D8319F9847C00F44FFB /* SportsSubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5784D8219F9847C00F44FFB /* SportsSubTests.m */; };
@@ -380,6 +382,9 @@
 		E54456D81A1C01680022B215 /* UserSentInvitation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSentInvitation.m; sourceTree = "<group>"; };
 		E54456DA1A1C01740022B215 /* UserReceivedInvitation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserReceivedInvitation.h; sourceTree = "<group>"; };
 		E54456DB1A1C01740022B215 /* UserReceivedInvitation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserReceivedInvitation.m; sourceTree = "<group>"; };
+		E552A65A1A21F5330015D12E /* UserInvitationCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInvitationCellTableViewCell.h; sourceTree = "<group>"; };
+		E552A65B1A21F5330015D12E /* UserInvitationCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInvitationCellTableViewCell.m; sourceTree = "<group>"; };
+		E552A65C1A21F5330015D12E /* UserInvitationCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInvitationCellTableViewCell.xib; sourceTree = "<group>"; };
 		E5784D6019F9847B00F44FFB /* SportsSub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsSub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5784D6419F9847B00F44FFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5784D6519F9847B00F44FFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -758,6 +763,9 @@
 				E54456D21A1BF7270022B215 /* UserInvitationViewController.h */,
 				E54456D31A1BF7270022B215 /* UserInvitationViewController.m */,
 				E54456D41A1BF7270022B215 /* UserInvitationViewController.xib */,
+				E552A65A1A21F5330015D12E /* UserInvitationCellTableViewCell.h */,
+				E552A65B1A21F5330015D12E /* UserInvitationCellTableViewCell.m */,
+				E552A65C1A21F5330015D12E /* UserInvitationCellTableViewCell.xib */,
 			);
 			path = "User Invitations";
 			sourceTree = "<group>";
@@ -1183,6 +1191,7 @@
 				E5F57E7F1A18B453003DA901 /* profile_active@2x.png in Resources */,
 				E5784E6A19F995DE00F44FFB /* SignUpViewController.xib in Resources */,
 				E5784D7219F9847B00F44FFB /* Main.storyboard in Resources */,
+				E552A65E1A21F5330015D12E /* UserInvitationCellTableViewCell.xib in Resources */,
 				D73B56BB1A19185B0032E01E /* female_icon@2x.png in Resources */,
 				E5F57E651A18B449003DA901 /* fav_active.png in Resources */,
 				E53F86C31A1DBA580080942A /* AFNetworkingSampleCode-Info.plist in Resources */,
@@ -1351,6 +1360,7 @@
 				E53F86C51A1DBA580080942A /* AFURLConnectionOperation.m in Sources */,
 				D7F41B151A1D113A00F4011B /* MapDetailViewControllerViewController.m in Sources */,
 				E5B9A2451A14785600B2B93D /* AbstractActionSheetPicker.m in Sources */,
+				E552A65D1A21F5330015D12E /* UserInvitationCellTableViewCell.m in Sources */,
 				E53F86C11A1DBA580080942A /* AFJSONRequestOperation.m in Sources */,
 				E51718D31A05191200BA8558 /* Sports.m in Sources */,
 				E5784E2619F98EC800F44FFB /* AppDelegate.m in Sources */,

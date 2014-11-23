@@ -16,6 +16,7 @@
 #import "AFNetworking.h"
 #import "AFJSONRequestOperation.h"
 #import "UserFavourites.h"
+#import "UserInvitationCellTableViewCell.h"
 @interface UserInvitationViewController ()
 
 @end
@@ -53,10 +54,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if ([[[SSDBManager sharedInstance] getDBSentInvitations] count]==0)
-    {
-        [SSAlertView showWithTitle:@"No Sent Invitations" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitle:nil];
-    }
+ 
 }
 
 -(void)getSentAllInvitations
@@ -85,6 +83,12 @@
                  
                  [[SSDBManager sharedInstance]saveSentInvitations:[[response objectForKey:@"content"] objectForKey:@"sentRequestList"]];
                  [_inviteTableView reloadData];
+                 
+                 
+                 if ([[[SSDBManager sharedInstance] getDBSentInvitations] count]==0)
+                 {
+                     [SSAlertView showWithTitle:@"No Sent Invitations" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitle:nil];
+                 }
              }
              else
              {
@@ -112,17 +116,28 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"LeadersCell";
-    FavoritiesTableViewCell *cell=(FavoritiesTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"UserInvitationCellTableViewCell";
+    UserInvitationCellTableViewCell *cell=(UserInvitationCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[FavoritiesTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UserInvitationCellTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        
         
     }
     
     
+    cell.tag=indexPath.row;
+    
     UserSentInvitation *user=[[[SSDBManager sharedInstance] getDBSentInvitations] objectAtIndex:indexPath.row];
     
-    [cell updateData:user.senTToFirstname imageViewUrlString:user.touserthumbimageurl];
+    [cell.userNameLabel setText:user.senTToFirstname];
+    
+    [cell.userImageView setImageWithURL:[NSURL URLWithString:user.touserthumbimageurl] placeholderImage:nil];
+    
+    
+    
+    
+    
+    //[cell updateData:user.senTToFirstname imageViewUrlString:user.touserthumbimageurl];
     
     //cell.textLabel.text=user.favouriteUserFirstname;
     //    [cell updateCell:self];

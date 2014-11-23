@@ -77,7 +77,12 @@ static SSDBManager *sharedInstance=nil;
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:entity inManagedObjectContext:[SSDBManager getContext]] ;
    // [NSManagedObjectModel entities];
     
+    
+  //  [fetchRequest setResultType:NSDictionaryResultType];
+    
     NSFetchRequest *request = [[NSFetchRequest alloc] init] ;
+    [request setResultType:NSDictionaryResultType];
+
     [request setEntity:entityDescription];
     if(predicate)
     {

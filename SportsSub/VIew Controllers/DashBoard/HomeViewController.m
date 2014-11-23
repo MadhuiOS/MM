@@ -73,12 +73,11 @@
 -(void)viewDidLayoutSubviews{
     if (IS_IPHONE_5)
     {
-
        
     }
     else
     {
-                self.tblFindPlayer.frame=CGRectMake(0, 0, 320, 300);
+        self.tblFindPlayer.frame=CGRectMake(0, 0, 320, 300);
     }
 
 }

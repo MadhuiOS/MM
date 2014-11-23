@@ -129,20 +129,26 @@
 {
     NSLog(@"Clicked Save Button ...");
     
-    /*
+
     
     _imgViewProfile.image=[UIImage imageNamed:@"fav_invite.png"];
     
-    NSData *imgData=UIImagePNGRepresentation(_imgViewProfile.image);
+    NSData *imgData=UIImagePNGRepresentation([UIImage imageNamed:@"fav_invite.png"]);
     
     NSDictionary *dictParam=@{@"user_id":@"1",@"profile_pic":imgData};
     
-    [[NetworkManager sharedInstance] editUserProfilePicture:dictParam WithBlock:^(NSArray *query, NSError *errorOrNil) {
-        
+    
+    
+    [[SSNetworkManager sharedInstance]requestURL:[NSString stringWithFormat:@"%@editProfilePic",DUURL] requestType:@"POST" requestrequestData:dictParam WithBlock:^(NSDictionary *response, NSError *errorOrNil) {
+        NSLog(@"%@",response);
     }];
     
+//    [[SSNetworkManager sharedInstance] editUserProfilePicture:dictParam WithBlock:^(NSArray *query, NSError *errorOrNil) {
+//        
+//    }];
     
-    */
+    
+    
     
 //    user_id - (required)
 //    first_name - (optional)
@@ -154,11 +160,11 @@
 //    longitude - (optional)
 
     
-    NSDictionary *dictParam=@{@"user_id":@"1",@"first_name":@"vvv"};
-    
-    [[SSNetworkManager sharedInstance] requestURL:[NSString stringWithFormat:@"%@editprofile",DUURL] requestType:@"POST" requestrequestData:dictParam WithBlock:^(NSDictionary *response, NSError *errorOrNil) {
-        
-    }];
+//    NSDictionary *dictParam=@{@"user_id":@"1",@"first_name":@"vvv"};
+//    
+//    [[SSNetworkManager sharedInstance] requestURL:[NSString stringWithFormat:@"%@editprofile",DUURL] requestType:@"POST" requestrequestData:dictParam WithBlock:^(NSDictionary *response, NSError *errorOrNil) {
+//        
+//    }];
    
     
 }
