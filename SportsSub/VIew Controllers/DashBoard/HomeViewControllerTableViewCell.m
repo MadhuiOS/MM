@@ -85,6 +85,10 @@
 #pragma Update
 -(void)updateCell:(UserReceivedInvitation *)userInv
 {
+    if (!userInv)
+    {
+        return;
+    }
     userInvitation=userInv;
     
     [self toggleButtons];
@@ -96,11 +100,13 @@
 //    }
     
     
-    NSString *strHtml=[NSString stringWithFormat:@"<html><head><title></title></head><body style='font-family:Arial;padding:0x;margin:0px;background-color:transparent;font-size:8px;color:#bdc0c2'><strong>%@</strong> you to play <strong>%@</strong></body></html>",userInv.fromFirstname,userInv.sportName];
+    NSLog(@"%@",userInv.userthumbimageurl);
+    
+    NSString *strHtml=[NSString stringWithFormat:@"<html><head><title></title></head><body style='font-family:Arial;padding:0x;margin:0px;background-color:transparent;font-size:8px;color:#bdc0c2'><strong>%@</strong> you to play <strong>%@</strong></body></html>",userInvitation.fromFirstname,userInvitation.sportName];
     
     
     [wvInvite loadHTMLString:strHtml baseURL:nil];
-    [imgInvite setImageWithURL:[NSURL URLWithString:userInv.userthumbimageurl] placeholderImage:[UIImage imageNamed:@""]];
+    [imgInvite setImageWithURL:[NSURL URLWithString:userInvitation.userthumbimageurl] placeholderImage:[UIImage imageNamed:@""]];
     imgInvite.layer.cornerRadius=imgInvite.frame.size.width/2;
     imgInvite.clipsToBounds=YES;
     

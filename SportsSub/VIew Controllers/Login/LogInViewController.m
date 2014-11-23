@@ -178,43 +178,56 @@
         
         NSLog(@"%@",[response valueForKey:@"content"]);
         NSLog(@"%@",[response valueForKey:@"error"]);
+        
+        
+     
+        
         if ([[response valueForKey:@"error"] isKindOfClass:[NSNull class]])
         {
-            // userId = 1;
             
-            [UserDefaultsHelper setStringValue:[[response valueForKey:@"content"] objectForKey:@"userId"] forKey:@"userid"];
             
-            if ([response valueForKey:@"message"]!=nil) {
-                if ([[response valueForKey:@"message"] isEqualToString:@"Invalid login detail."]) {
-                    [SSAlertView  showWithTitle:@"Login Error" message:[response valueForKey:@"message"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitle:nil];
-                    
-                    
-                }
-                else
-                {
-                    
-                    AppDelegate *appDelegate=(AppDelegate*) [[UIApplication sharedApplication] delegate];
-                    
-                    [UserDefaultsHelper setBoolValue:YES forKey:@"userlogin"];
-                    
-                    if([appDelegate respondsToSelector:@selector(createTabbar)]){
-                        
-                        [[[UIApplication sharedApplication] delegate] performSelector:@selector(createTabbar)];
+            if (![[response valueForKey:@"message"] isEqualToString:@"Invalid login detail"])
+            {
+                if ([response valueForKey:@"message"]!=nil) {
+                    if ([[response valueForKey:@"message"] isEqualToString:@"Invalid login detail."])
+                    {
+                        [SSAlertView  showWithTitle:@"Login Error" message:[response valueForKey:@"message"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitle:nil];
                     }
-                    [[SSNetworkManager sharedInstance] requestURL:[NSString stringWithFormat:@"%@userDetail/%@",DUURL,[UserDefaultsHelper getStringForKey:@"userid"]] requestType:@"POST" requestrequestData:dictParam WithBlock:^(NSDictionary *response, NSError *errorOrNil) {
-                        NSLog(@"%@",response);
-                        NSLog(@"%@",[errorOrNil description]);
-                        [[SSDBManager sharedInstance] saveUserProfile:[response objectForKey:@"content"]];
-                    }];
-                    
+                    else
+                    {
+                        
+                        [UserDefaultsHelper setStringValue:[[response valueForKey:@"content"] objectForKey:@"userId"] forKey:@"userid"];
+                        
+                        AppDelegate *appDelegate=(AppDelegate*) [[UIApplication sharedApplication] delegate];
+                        
+                        [UserDefaultsHelper setBoolValue:YES forKey:@"userlogin"];
+                        
+                        if([appDelegate respondsToSelector:@selector(createTabbar)]){
+                            
+                            [[[UIApplication sharedApplication] delegate] performSelector:@selector(createTabbar)];
+                        }
+                        [[SSNetworkManager sharedInstance] requestURL:[NSString stringWithFormat:@"%@userDetail/%@",DUURL,[UserDefaultsHelper getStringForKey:@"userid"]] requestType:@"POST" requestrequestData:dictParam WithBlock:^(NSDictionary *response, NSError *errorOrNil) {
+                            NSLog(@"%@",response);
+                            NSLog(@"%@",[errorOrNil description]);
+                            [[SSDBManager sharedInstance] saveUserProfile:[response objectForKey:@"content"]];
+                        }];
+                        
+                    }
                 }
+                
+            }
+            else
+            {
+                [SSAlertView  showWithTitle:@"Login Error" message:[response valueForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitle:nil];
             }
             
-        }
-        else
-        {
-            [SSAlertView  showWithTitle:@"Login Error" message:[response valueForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitle:nil];
-        }
+            }
+            else
+            {
+                [SSAlertView  showWithTitle:@"Login Error" message:[response valueForKey:@"message"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitle:nil];
+            }
+            
+       
         
     }];
     

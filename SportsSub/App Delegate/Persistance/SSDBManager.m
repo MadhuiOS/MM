@@ -81,7 +81,7 @@ static SSDBManager *sharedInstance=nil;
   //  [fetchRequest setResultType:NSDictionaryResultType];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init] ;
-    [request setResultType:NSDictionaryResultType];
+   // [request setResultType:NSDictionaryResultType];
 
     [request setEntity:entityDescription];
     if(predicate)

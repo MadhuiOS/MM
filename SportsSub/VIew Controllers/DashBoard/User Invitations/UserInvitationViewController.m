@@ -61,42 +61,50 @@
 {
     
     [Utilities showProgressView:self.view];
-    [[SSNetworkManager sharedInstance] requestURL:[NSString stringWithFormat:@"%@sentRequest/2",DUINVITEURL] requestType:@"POST" requestrequestData:nil WithBlock:^(NSDictionary *response, NSError *errorOrNil)
+    [[SSNetworkManager sharedInstance] requestURL:[NSString stringWithFormat:@"%@sentRequest/%@",DUINVITEURL,[UserDefaultsHelper getStringForKey:@"userid"]] requestType:@"POST" requestrequestData:nil WithBlock:^(NSDictionary *response, NSError *errorOrNil)
      {
          
-         
-         
-         if ([[response valueForKey:@"error"] isKindOfClass:[NSNull class]])
+         if ([[response objectForKey:@"content"] isEqualToString:@""])
          {
+              [SSAlertView showWithTitle:@"No Sent Invitations" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitle:nil];
+         }
+         else
              
-             if ([response objectForKey:@"content"])
+         {
+             if ([[response valueForKey:@"error"] isKindOfClass:[NSNull class]])
              {
-                
-                 NSLog(@"%@",[[response objectForKey:@"content"] objectForKey:@"sentRequestList"]);
                  
-                 
-                 NSLog(@"%@",[errorOrNil description]);
-                 
-                 
-                 [Utilities hideProgressView];
-                 
-                 
-                 [[SSDBManager sharedInstance]saveSentInvitations:[[response objectForKey:@"content"] objectForKey:@"sentRequestList"]];
-                 [_inviteTableView reloadData];
-                 
-                 
-                 if ([[[SSDBManager sharedInstance] getDBSentInvitations] count]==0)
+                 if ([response objectForKey:@"content"])
                  {
-                     [SSAlertView showWithTitle:@"No Sent Invitations" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitle:nil];
+                     
+                     NSLog(@"%@",[[response objectForKey:@"content"] objectForKey:@"sentRequestList"]);
+                     
+                     
+                     NSLog(@"%@",[errorOrNil description]);
+                     
+                     
+                     [Utilities hideProgressView];
+                     
+                     
+                     [[SSDBManager sharedInstance]saveSentInvitations:[[response objectForKey:@"content"] objectForKey:@"sentRequestList"]];
+                     [_inviteTableView reloadData];
+                     
+                     
+                     if ([[[SSDBManager sharedInstance] getDBSentInvitations] count]==0)
+                     {
+                         [SSAlertView showWithTitle:@"No Sent Invitations" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitle:nil];
+                     }
                  }
-             }
-             else
-             {
+                 else
+                 {
+                     
+                 }
                  
              }
-           
-             }
-           [Utilities hideProgressView];
+
+         }
+         
+                  [Utilities hideProgressView];
      }];
 }
 

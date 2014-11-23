@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-
 @interface UserSentInvitation : NSManagedObject
 
 @property (nonatomic, retain) NSString * touserthumbimageurl;
