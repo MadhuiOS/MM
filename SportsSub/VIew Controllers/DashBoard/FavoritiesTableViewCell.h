@@ -14,6 +14,6 @@
 }
 
 -(void)updateCell:(id)object;
--(void)UpdateData:(NSString*)tittle imageViewUrlString:(NSString*)ImageString;
+-(void)updateData:(NSString*)title imageViewUrlString:(NSString*)ImageString;
 
 @end

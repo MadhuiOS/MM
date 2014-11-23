@@ -54,7 +54,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SportsSub/App Delegate/Persistance/SSDBManager.m"
@@ -852,8 +852,8 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[FilterFindPlayerViewController filterButtonPressed:]"
                   moduleName = "SportsSub"
-                  urlString = "file:///Users/kalyanvarma/Documents/Kalyan%20/WC_SS/New%20SS%20after%20Fb%20implementation/SportsSub/SportsSub/VIew%20Controllers/DashBoard/FilterFindPlayerViewController.m"
-                  timestampString = "438125331.332488"
+                  urlString = "file:///Users/kalyanvarma/Desktop/MM/SportsSub/VIew%20Controllers/DashBoard/FilterFindPlayerViewController.m"
+                  timestampString = "438426615.607907"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "197"
@@ -866,8 +866,8 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__54-[FilterFindPlayerViewController filterButtonPressed:]_block_invoke"
                   moduleName = "SportsSub"
-                  urlString = "file:///Users/kalyanvarma/Documents/Kalyan%20/WC_SS/New%20SS%20after%20Fb%20implementation/SportsSub/SportsSub/VIew%20Controllers/DashBoard/FilterFindPlayerViewController.m"
-                  timestampString = "438125331.332616"
+                  urlString = "file:///Users/kalyanvarma/Desktop/MM/SportsSub/VIew%20Controllers/DashBoard/FilterFindPlayerViewController.m"
+                  timestampString = "438426615.608021"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "197"
@@ -948,11 +948,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SportsSub/VIew Controllers/DashBoard/User Invitations/UserInvitationViewController.m"
-            timestampString = "438043956.375512"
+            timestampString = "438424173.908434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-getSentAllInvitations"
             landmarkType = "5">
          </BreakpointContent>
@@ -964,11 +964,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SportsSub/VIew Controllers/DashBoard/User Invitations/UserInvitationViewController.m"
-            timestampString = "438043919.644232"
+            timestampString = "438424173.908434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "-getSentAllInvitations"
             landmarkType = "5">
          </BreakpointContent>
@@ -980,12 +980,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SportsSub/VIew Controllers/DashBoard/User Invitations/UserInvitationViewController.m"
-            timestampString = "438044003.396751"
+            timestampString = "438424173.908434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "-getSentAllInvitations"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -996,11 +996,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SportsSub/VIew Controllers/DashBoard/User Invitations/UserInvitationViewController.m"
-            timestampString = "438044066.307105"
+            timestampString = "438424173.908434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "-getSentAllInvitations"
             landmarkType = "5">
          </BreakpointContent>
@@ -1018,6 +1018,102 @@
             startingLineNumber = "122"
             endingLineNumber = "122"
             landmarkName = "-addToFavouritesTapped:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportsSub/VIew Controllers/DashBoard/FavoritiesTableViewCell.m"
+            timestampString = "438423104.857586"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-updateData:imageViewUrlString:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportsSub/VIew Controllers/DashBoard/User Invitations/UserInvitationViewController.m"
+            timestampString = "438424173.908434"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-getSentAllInvitations"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportsSub/App Delegate/Persistance/SSDBManager.m"
+            timestampString = "438423229.077795"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "-saveSentInvitations:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportsSub/VIew Controllers/DashBoard/User Invitations/UserInvitationViewController.m"
+            timestampString = "438424173.908434"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "-tableView:numberOfRowsInSection:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportsSub/App Delegate/Persistance/SSDBManager.m"
+            timestampString = "438423606.470832"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
+            landmarkName = "-saveSentInvitations:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportsSub/VIew Controllers/DashBoard/User Invitations/UserInvitationViewController.m"
+            timestampString = "438424217.175939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

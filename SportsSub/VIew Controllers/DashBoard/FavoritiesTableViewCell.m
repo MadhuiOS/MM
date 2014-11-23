@@ -65,8 +65,8 @@
     [lblName setText:@"Anney"];
     
 }
--(void)UpdateData:(NSString*)tittle imageViewUrlString:(NSString*)ImageString{
-    [lblName setText:tittle];
+-(void)updateData:(NSString*)title imageViewUrlString:(NSString*)ImageString{
+    [lblName setText:title];
     [imgFavorite setImageWithURL:[NSURL URLWithString:ImageString] placeholderImage:[UIImage imageNamed:@""]];
     imgFavorite.layer.cornerRadius=imgFavorite.frame.size.width/2;
     imgFavorite.clipsToBounds=YES;

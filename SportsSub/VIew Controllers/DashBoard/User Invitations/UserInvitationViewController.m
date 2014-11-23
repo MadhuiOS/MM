@@ -15,6 +15,7 @@
 #import "SSAlertView.h"
 #import "AFNetworking.h"
 #import "AFJSONRequestOperation.h"
+#import "UserFavourites.h"
 @interface UserInvitationViewController ()
 
 @end
@@ -62,7 +63,7 @@
 {
     
     [Utilities showProgressView:self.view];
-    [[SSNetworkManager sharedInstance] requestURL:[NSString stringWithFormat:@"%@sentRequest/3",DUINVITEURL] requestType:@"POST" requestrequestData:nil WithBlock:^(NSDictionary *response, NSError *errorOrNil)
+    [[SSNetworkManager sharedInstance] requestURL:[NSString stringWithFormat:@"%@sentRequest/2",DUINVITEURL] requestType:@"POST" requestrequestData:nil WithBlock:^(NSDictionary *response, NSError *errorOrNil)
      {
          
          
@@ -83,6 +84,7 @@
                  
                  
                  [[SSDBManager sharedInstance]saveSentInvitations:[[response objectForKey:@"content"] objectForKey:@"sentRequestList"]];
+                 [_inviteTableView reloadData];
              }
              else
              {
@@ -117,10 +119,19 @@
         
     }
     
+    
+    UserSentInvitation *user=[[[SSDBManager sharedInstance] getDBSentInvitations] objectAtIndex:indexPath.row];
+    
+    [cell updateData:user.senTToFirstname imageViewUrlString:user.touserthumbimageurl];
+    
+    //cell.textLabel.text=user.favouriteUserFirstname;
+    //    [cell updateCell:self];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+
     //  Tweets *tweet=[[[Content shared] leaderTweets] objectAtIndex:indexPath.row];
 //    cell.textLabel.text =[NSString stringWithFormat:@"%ld",(long)indexPath.row];
-    [cell updateCell:self];
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+//    [cell updateCell:self];
+   // [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
     
 }

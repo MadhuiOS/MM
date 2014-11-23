@@ -86,7 +86,7 @@
     
     UserFavourites *user=[[[SSDBManager sharedInstance] getDBFavorites] objectAtIndex:indexPath.row];
 
-    [cell UpdateData:user.favouriteUserFirstname imageViewUrlString:user.favouriteUserThumbImage];
+    [cell updateData:user.favouriteUserFirstname imageViewUrlString:user.favouriteUserThumbImage];
     
     //cell.textLabel.text=user.favouriteUserFirstname;
 //    [cell updateCell:self];
