@@ -109,6 +109,7 @@
     UserReceivedInvitation *userInv=[[[SSDBManager sharedInstance] getDBReceivedInvitations] objectAtIndex:indexPath.row];
     
     [cell updateCell:userInv];
+    
     cell.delegate=self;
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;

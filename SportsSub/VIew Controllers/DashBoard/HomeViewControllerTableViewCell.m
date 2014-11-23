@@ -7,7 +7,8 @@
 //
 
 #import "HomeViewControllerTableViewCell.h"
-
+#import "AFNetworking.h"
+#import "AFJSONRequestOperation.h"
 @interface HomeViewControllerTableViewCell()
 {
     UIImageView *imgInvite;
@@ -99,6 +100,9 @@
     
     
     [wvInvite loadHTMLString:strHtml baseURL:nil];
+    [imgInvite setImageWithURL:[NSURL URLWithString:userInv.userthumbimageurl] placeholderImage:[UIImage imageNamed:@""]];
+    imgInvite.layer.cornerRadius=imgInvite.frame.size.width/2;
+    imgInvite.clipsToBounds=YES;
     
 }
 
