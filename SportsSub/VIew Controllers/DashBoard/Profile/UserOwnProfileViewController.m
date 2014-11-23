@@ -14,7 +14,8 @@
 #import "UserDefaultsHelper.h"
 #import "SSDBManager.h"
 #import "Utilities.h"
-
+#import "AFNetworking.h"
+#import "AFJSONRequestOperation.h"
 @implementation UserOwnProfileViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -90,36 +91,18 @@
         NSLog(@"%@",response);
     }];
    
-    /*
-     
-     183.182.84.84/sportsub/user/editProfilePic
-     Method: HTTP POST
-     Parameters:
-     user_id - (required)
-     profile_pic - (required)
-     
-     */
-    
-//    NSData *date=[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://www.belforfx.com/sites/default/files/blog-img/Apple-Think_Different-Apple-Logo.jpg"]];
-//    
-//    NSDictionary *dictParam2=@{@"user_id":[UserDefaultsHelper getStringForKey:@"userid"],date:@"profile_pic"};
-//
-//    
-//    [[SSNetworkManager sharedInstance] requestURL:[NSString stringWithFormat:@"%@editProfilePic",DUURL] requestType:@"POST" requestrequestData:dictParam2 WithBlock:^(NSDictionary *response, NSError *errorOrNil) {
-//        NSLog(@"%@",response);
-//    }];
-    
-    
-    
-    _imgViewProfile.layer.cornerRadius = _imgViewProfile.frame.size.width / 2;
-    _imgViewProfile.clipsToBounds = YES;
     
     userProfile = [SSDBManager getDBUserProfile];
+    _imgViewProfile.layer.cornerRadius = _imgViewProfile.frame.size.width / 2;
+    _imgViewProfile.clipsToBounds = YES;
+    [_imgViewProfile setImageWithURL:[NSURL URLWithString:userProfile.userThumbImage] placeholderImage:[UIImage imageNamed:@""]];
+    
+    
     
     [_lblEmail setText:userProfile.userEmail];
     NSString * timeStampString = userProfile.userDOB;
     NSTimeInterval _interval=[timeStampString doubleValue];
-   // NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
     
     
 //    NSString *stringFromDate =
